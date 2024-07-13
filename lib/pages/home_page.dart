@@ -12,11 +12,13 @@ class HomePage extends StatelessWidget {
       body: ListView.builder(
           itemCount: 10,
           itemBuilder: (context, index){
-         return const ListTile(
+         return  ListTile(
            title: Text("Title 1"),
            subtitle: Text('price 100'),
+           trailing: IconButton(onPressed: (){
+             print("delete");
+           }, icon: Icon(Icons.delete)),
          );
-
       }),
     );
   }
