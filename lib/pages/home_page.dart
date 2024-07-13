@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:footwear_admin/pages/add_product_page.dart';
+import 'package:get/get.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -20,6 +22,13 @@ class HomePage extends StatelessWidget {
            }, icon: Icon(Icons.delete)),
          );
       }),
+
+      floatingActionButton: FloatingActionButton(
+        onPressed: (){
+         Get.to(AddProductPage());
+        },
+        child: const Icon(Icons.add),
+      ),
     );
   }
 }
